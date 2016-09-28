@@ -10,13 +10,15 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            int x1 = 10;
-            int y1 = 4;
-            char symbol = '*';
-            Console.SetCursorPosition(x1, y1);
-            Console.Write(symbol);
+            point p1 = new Point();
+            p1.x = 10;
+            p1.y = 4;
+            p1.symbol = '*';
+            p1.Draw();
             
-            /*Console.WriteLine("Hello, world!");
+            /*Console.SetCursorPosition(x1, y1);
+            Console.Write(symbol);
+            Console.WriteLine("Hello, world!");
              */ 
             
             Console.ReadLine();
