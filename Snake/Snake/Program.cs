@@ -10,7 +10,15 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, world!");
+            int x1 = 10;
+            int y1 = 4;
+            char symbol = '*';
+            Console.SetCursorPosition(x1, y1);
+            Console.Write(symbol);
+            
+            /*Console.WriteLine("Hello, world!");
+             */ 
+            
             Console.ReadLine();
         }
     }
