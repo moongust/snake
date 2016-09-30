@@ -8,6 +8,11 @@ namespace Snake
 {
     class Point
     {
+        /* Класс состоит из
+         * - данных
+         * - конструкторов
+         * - методов
+         */
         public int x;
         public int y;
         public char symbol;
