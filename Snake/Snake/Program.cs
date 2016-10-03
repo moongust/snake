@@ -25,16 +25,7 @@ namespace Snake
             {
                 Console.WriteLine(i);
             }
-            
-
-            /* p1.x = 10;
-            p1.y = 4;
-            p1.symbol = '*';
-            Console.SetCursorPosition(x1, y1);
-            Console.Write(symbol);
-            Console.WriteLine("Hello, world!");
-             */ 
-            
+                
             Console.ReadLine();
         }
     }
