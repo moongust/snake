@@ -33,5 +33,26 @@ namespace Snake
             Console.SetCursorPosition(x, y);
             Console.Write(symbol);
         }
+        public void Move(Direction _Direction)
+        {
+            Point NewPoint = new Point(x, y, symbol);
+            if (_Direction == TOP)
+            {
+                NewPoint.y--;
+            }
+            else if (_Direction == DOWN)
+            {
+                NewPoint.y++;
+            }
+            else if (_Direction == LEFT)
+            {
+                NewPoint.x--;
+            }
+            else if (_Direction == RIGHT)
+            {
+                NewPoint.x++;
+            }
+            return NewPoint;
+        }
     }
 }
