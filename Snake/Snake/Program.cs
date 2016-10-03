@@ -15,7 +15,9 @@ namespace Snake
             if (mode == "HorizontalLine")
             {
                 HorizontalLine hr = new HorizontalLine(10, 15, 3, '#');
+                VerticalLine vr = new VerticalLine(4, 1, 10, '$');
                 hr.Draw();
+                vr.Draw();
                 
             }
             else
