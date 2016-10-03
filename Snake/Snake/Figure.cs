@@ -8,13 +8,13 @@ namespace Snake
 {
     class Figure
     {
-        private List<Point> PointList;
+        public List<Point> PointList;
 
         public void Draw()
         {
             foreach (Point _point in PointList)
             {
-                _point.Draw()
+                _point.Draw();
             }
         }
     }
