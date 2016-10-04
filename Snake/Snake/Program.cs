@@ -14,10 +14,12 @@ namespace Snake
 
             if (mode == "HorizontalLine")
             {
-                HorizontalLine hr = new HorizontalLine(10, 15, 3, '#');
-                VerticalLine vr = new VerticalLine(4, 1, 10, '$');
+                HorizontalLine hr = new HorizontalLine(1, 15, 1, '#');
+                VerticalLine vr = new VerticalLine(1, 1, 15,'#');
                 hr.Draw();
                 vr.Draw();
+                RunningSnake rs = new RunningSnake(new Point(3, 3, '*'), 5, Direction.DOWN);
+                rs.Draw();
                 
             }
             else

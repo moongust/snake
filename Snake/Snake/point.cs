@@ -28,11 +28,41 @@ namespace Snake
             symbol = _symbol;
         }
 
+        public Point(Point point, Direction direction)
+        {
+            x = point.x;
+            y = point.y;
+            symbol = point.symbol;
+
+            switch (direction)
+            {
+                case Direction.DOWN:
+                    y++;
+                    break;
+                case Direction.TOP: 
+                    y--;
+                    break;
+                case Direction.LEFT:
+                    x--;
+                    break;
+                case Direction.RIGHT:
+                    x++;
+                    break;
+            }
+        }
+
+        public Point Move(Direction direction)
+        {
+            return new Point(this, direction);
+        }
+
         public void Draw()
         {
             Console.SetCursorPosition(x, y);
             Console.Write(symbol);
         }
+        
+        /*
         public void Move(Direction _Direction)
         {
             Point NewPoint = new Point(x, y, symbol);
@@ -53,6 +83,7 @@ namespace Snake
                 NewPoint.x++;
             }
             return NewPoint;
-        }
+        } 
+        */
     }
 }

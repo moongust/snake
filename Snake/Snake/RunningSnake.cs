@@ -8,20 +8,22 @@ namespace Snake
 {
     class RunningSnake:Figure
     {
-        public RunningSnake(Point Tail, int Length, Direction _Direction)
+        public RunningSnake(Point Tail, int Length, Direction direction)
         {
             PointList = new List<Point>();
             PointList.Add(Tail);
             Point NextPoint = Tail;
-            if (_Direction == TOP)
+            for (int i = 1; i < Length; i++)
             {
-                for (y = 0; y < Length; y++)
-                {
-                    NextPoint = NextPoint.Move(_Direction);
-                    PointList.Add(NextPoint);                    
-                }
+                NextPoint = NextPoint.Move(direction);
+                PointList.Add(NextPoint);
             }
+                                   
+        }
 
+        
+        piblic void Move()
+        {
             
         }
     }
