@@ -29,6 +29,7 @@ namespace Snake
         }
 
         public Point(Point point, Direction direction)
+        /* Create new point: copy from point and then shift new point to direction*/
         {
             x = point.x;
             y = point.y;
@@ -51,7 +52,7 @@ namespace Snake
             }
         }
 
-        public Point Move(Direction direction)
+        public Point CopyShift(Direction direction)
         {
             return new Point(this, direction);
         }
@@ -61,7 +62,14 @@ namespace Snake
             Console.SetCursorPosition(x, y);
             Console.Write(symbol);
         }
-        
+
+        public void UnDraw()
+        {
+            Console.SetCursorPosition(x, y);
+            Console.Write(' ');
+        }
+
+
         /*
         public void Move(Direction _Direction)
         {

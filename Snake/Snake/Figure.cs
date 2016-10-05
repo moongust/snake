@@ -17,5 +17,13 @@ namespace Snake
                 _point.Draw();
             }
         }
+        public void UnDraw()
+        {
+            foreach (Point _point in PointList)
+            {
+                _point.UnDraw();
+            }
+        }
+
     }
 }

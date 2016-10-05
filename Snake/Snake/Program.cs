@@ -18,9 +18,9 @@ namespace Snake
                 VerticalLine vr = new VerticalLine(1, 1, 15,'#');
                 hr.Draw();
                 vr.Draw();
-                RunningSnake rs = new RunningSnake(new Point(3, 3, '*'), 5, Direction.DOWN);
-                rs.Draw();
-                
+                RunningSnake rs1 = new RunningSnake(new Point(3, 3, '*'), 5, Direction.DOWN);
+                RunningSnake rs2 = new RunningSnake(new Point(5, 5, 'V'), 8, Direction.DOWN);
+
             }
             else
             {
