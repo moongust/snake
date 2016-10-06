@@ -10,36 +10,23 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            string mode = "HorizontalLine";
+            HorizontalLine hr = new HorizontalLine(1, 15, 1, '#');
+            VerticalLine vr = new VerticalLine(1, 1, 15,'#');
+            hr.Draw();
+            vr.Draw();
+            RunningSnake rs1 = new RunningSnake(new Point(3, 3, 'D'), 5, Direction.DOWN);
+            RunningSnake rs2 = new RunningSnake(new Point(5, 5, '*'), 8, Direction.DOWN);
 
-            if (mode == "HorizontalLine")
+            List<Direction> DirList = new List<Direction> {Direction.LEFT,Direction.LEFT,Direction.LEFT,
+                Direction.DOWN,Direction.DOWN,Direction.RIGHT,Direction.TOP,Direction.RIGHT,
+                Direction.RIGHT,Direction.RIGHT,Direction.RIGHT,Direction.RIGHT,Direction.DOWN,
+                Direction.DOWN};
+
+            foreach (Direction d in DirList)
             {
-                HorizontalLine hr = new HorizontalLine(1, 15, 1, '#');
-                VerticalLine vr = new VerticalLine(1, 1, 15,'#');
-                hr.Draw();
-                vr.Draw();
-                RunningSnake rs1 = new RunningSnake(new Point(3, 3, '*'), 5, Direction.DOWN);
-                RunningSnake rs2 = new RunningSnake(new Point(5, 5, 'V'), 8, Direction.DOWN);
-
+                rs2.Move(d);
+                System.Threading.Thread.Sleep(500);
             }
-            else
-            {
-                Point p1 = new Point(10, 4, '*');
-                Point p2 = new Point(10, 5, '*');
-
-                p1.Draw();
-                p2.Draw();
-
-                List<int> numlist = new List<int>();
-                numlist.Add(24);
-                numlist.Add(48);
-                numlist.Add(96);
-
-                foreach (int i in numlist)
-                {
-                    Console.WriteLine(i);
-                }
-            }  
             Console.ReadLine();
         }
     }

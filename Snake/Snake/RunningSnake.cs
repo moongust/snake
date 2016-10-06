@@ -26,9 +26,10 @@ namespace Snake
          *  (хвостовая) клетка, создаётся новая головная клетка как сдвиг последней клетки в направлении Direction */        
         public void Move(Direction direction)
         {
-            
+            PointList.Add(PointList.Last().CopyShift(direction));
+            PointList.Last().Draw();
+            PointList[0].UnDraw();
+            PointList.Remove(PointList[0]);
         }
-
-
     }
 }
